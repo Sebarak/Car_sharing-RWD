@@ -1,0 +1,24 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  background-color: $color-white;
+  color: $color-text;
+}
+
+a{
+  text-decoration: none;
+  color: $color-text;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 8px;
+
+  @include tablet {
+    max-width: $tablet-width;
+  }
+
+  @include desktop {
+    max-width: $desktop-width;
+  }
+}

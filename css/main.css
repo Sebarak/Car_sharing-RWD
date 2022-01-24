@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nunito+Sans:wght@300;400;700;800&family=Open+Sans:wght@300;400&display=swap");
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 8px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+header {
+  height: 45px;
+  background-color: #000000cc;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+header h2 {
+  font: 800 28px/40px Nunito Sans;
+  color: #FFFFFF;
+  word-spacing: 5px;
+}
+header h2 span {
+  color: #FF0000;
+}
+header .hamburger {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+  right: 1.2%;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #FFFFFF33;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+header .hamburger::before {
+  content: "\f0c9";
+  border-radius: 6px;
+  color: #FF0000;
+  font-size: 35px;
+  font-family: "Font Awesome 5 Free", sans-serif;
+  font-weight: 900;
+}
+header .hamburger:checked ~ nav {
+  transform: translateX(20%);
+}
+header nav {
+  position: fixed;
+  top: 45px;
+  right: 0;
+  text-align: right;
+  background: #000000cc;
+  width: 40%;
+  height: 100vh;
+  border-left: 4px solid #FFFFFF33;
+  transform: translateX(100%);
+  transition: all 0.7s cubic-bezier(1, -0.72, 0, 1.49);
+}
+header nav .menu li {
+  font: bold 16px/2em "Nunito Sans", sans-serif;
+  border-top: 1px solid #FFFFFF33;
+  padding-right: 25%;
+}
+header nav .menu li a {
+  color: #FFFFFF;
+}
+header nav .menu li:last-of-type {
+  border-bottom: 1px solid #FFFFFF33;
+}
+header nav .menu li:hover {
+  cursor: pointer;
+  background-color: #FFFFFF33;
+  border-top: 1px solid #FFFFFF33;
+  border-bottom: 1px solid #FFFFFF33;
+}
+
+header:before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background: url(../../img/Icon.svg) no-repeat center/contain;
+}
+
+.banner {
+  background: url("../../img/Image.png") no-repeat center/cover;
+  height: 333px;
+  position: relative;
+}
+
+.banner_area {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-45%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.banner_area h1 {
+  font: 900 40px/60px "Nunito Sans", sans-serif;
+  color: #FFFFFF;
+  text-shadow: 0 3px 6px #00000040;
+}
+.banner_area p {
+  font: bold 12px/22px "Nunito Sans", sans-serif;
+  color: #FFFFFF;
+}
+.banner_area .banner__buttons {
+  display: flex;
+  flex-direction: column;
+}
+.banner_area .banner__buttons button {
+  border: none;
+  margin: 5px;
+  border-radius: 20px;
+  padding: 8px 80px;
+}
+.banner_area .banner__buttons button:first-of-type {
+  background-color: #FF0000;
+  color: #FFFFFF;
+  box-shadow: 0 3px 6px #FF00004D;
+}
+.banner_area .banner__buttons button:last-of-type {
+  background-color: #FFFFFF;
+  color: #FF0000;
+}
+/*# sourceMappingURL=main.css.map */

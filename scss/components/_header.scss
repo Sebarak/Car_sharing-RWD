@@ -1,0 +1,84 @@
+header{
+  height: 45px;
+  background-color: $color-header;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  h2{
+    font: 800 28px/40px Nunito Sans;
+    color: $color-white;
+    word-spacing: 5px;
+    span{
+      color: $color-primary;
+    }
+  }
+  .hamburger {
+    appearance: none;
+    position: absolute;
+    right: 1.2%;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: $color-header-focus;
+    cursor:pointer;
+
+    display: flex;
+    justify-content: center;
+
+    &::before {
+      content: '\f0c9';
+      border-radius: 6px;
+      color: $color-primary;
+      font-size: 35px;
+      font-family: "Font Awesome 5 Free", sans-serif;
+      font-weight: 900;
+    }
+    &:checked {
+
+      & ~ nav{
+        transform: translateX(20%);
+      }
+    }
+  }
+  nav{
+    position: fixed;
+    top: 45px;
+    right: 0;
+    text-align: right;
+    background: $color-header;
+    width: 40%;
+    height: 100vh;
+    border-left: 4px solid $color-header-focus;
+    transform: translateX(100%);
+    transition: all .7s cubic-bezier(1, -0.72, 0, 1.49);
+
+    .menu{
+      li{
+        font:bold 16px/2em "Nunito Sans",sans-serif;
+        border-top: 1px solid $color-header-focus;
+        padding-right: 25%;
+        a{
+          color: $color-white;
+        }
+      }
+      li:last-of-type{
+        border-bottom: 1px solid $color-header-focus;
+      }
+      li:hover{
+        cursor:pointer;
+        background-color: $color-header-focus;
+        border-top: 1px solid $color-header-focus;
+        border-bottom: 1px solid $color-header-focus;
+      }
+    }
+  }
+}
+header:before{
+  content: "";
+  width: 35px;
+  height: 35px;
+  background: url(../../img/Icon.svg) no-repeat center/contain;
+}
