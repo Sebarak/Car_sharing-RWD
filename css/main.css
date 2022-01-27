@@ -269,6 +269,8 @@ main .blog {
   align-items: center;
 }
 main .blog .blog__option {
+  margin-bottom: 25px;
+  border-bottom: 1px dashed #00000040;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -284,7 +286,7 @@ main .blog .blog__option p {
   color: #6A6A6A;
 }
 main .blog .blog__option button {
-  margin: 15px 0 25px 0;
+  margin: 15px 0;
   border: none;
   color: #FFFFFF;
   font: normal normal bold 14px/19px "Nunito Sans", sans-serif;

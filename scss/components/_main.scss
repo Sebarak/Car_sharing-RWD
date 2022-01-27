@@ -34,6 +34,8 @@ main{
     flex-direction: column;
     align-items: center;
     .blog__option{
+      margin-bottom: 25px;
+      border-bottom: 1px dashed $color-transparent;
 
       display: flex;
       flex-direction: column;
@@ -41,15 +43,15 @@ main{
       h3{
         margin: 25px 0 15px 0;
         font: 19px/26px "Nunito Sans",sans-serif;
-        color: #6A6A6A;
+        color: $color-paragraphs;
       }
       p{
         text-align: center;
         font: 300 14px/19px "Open Sans",sans-serif;
-        color: #6A6A6A;
+        color: $color-paragraphs;
       }
       button{
-        margin: 15px 0 25px 0;
+        margin: 15px 0;
         border: none;
         color: $color-white;
         font: normal normal bold 14px/19px "Nunito Sans",sans-serif;
