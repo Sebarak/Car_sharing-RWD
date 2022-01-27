@@ -59,6 +59,11 @@
         background-color: $color-primary;
         box-shadow: 0 3px 6px $color-primary-border;
         border-radius: 40px;
+        transition: transform .4s cubic-bezier(1, -0.72, 0, 1.49);
+      }
+      button:hover{
+        cursor: pointer;
+        transform: scale(1.1);
       }
     }
     &__segment:last-of-type{
