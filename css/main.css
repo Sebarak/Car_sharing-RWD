@@ -125,7 +125,7 @@ header .hamburger::before {
   font-weight: 900;
 }
 header .hamburger:checked ~ nav {
-  transform: translateX(20%);
+  transform: translateX(15%);
 }
 header nav {
   position: fixed;
@@ -158,13 +158,8 @@ header nav {
     align-items: center;
   }
 }
-header nav .menu li {
-  font: bold 16px/2em "Nunito Sans", sans-serif;
-  border-top: 1px solid #FFFFFF33;
-  padding-right: 25%;
-}
 @media screen and (min-width: 768px) {
-  header nav .menu li {
+  header nav .menu a {
     border: none;
     flex: 1 1;
     padding: 7px 0;
@@ -172,29 +167,37 @@ header nav .menu li {
   }
 }
 @media screen and (min-width: 1088px) {
-  header nav .menu li {
+  header nav .menu a {
     padding: 14px 0;
   }
 }
-header nav .menu li a {
+header nav .menu a li {
+  font: bold 16px/2em "Nunito Sans", sans-serif;
+  border-top: 1px solid #FFFFFF33;
   color: #FFFFFF;
+  padding-right: 20%;
 }
-header nav .menu li:last-of-type {
+@media screen and (min-width: 768px) {
+  header nav .menu a li {
+    padding-right: 0;
+  }
+}
+header nav .menu a li:last-of-type {
   border-bottom: 1px solid #FFFFFF33;
 }
 @media screen and (min-width: 768px) {
-  header nav .menu li:last-of-type {
+  header nav .menu a li:last-of-type {
     border: none;
   }
 }
-header nav .menu li:hover {
+header nav .menu a:hover {
   cursor: pointer;
   background-color: #FFFFFF33;
   border-top: 1px solid #FFFFFF33;
   border-bottom: 1px solid #FFFFFF33;
 }
 @media screen and (min-width: 768px) {
-  header nav .menu li:hover {
+  header nav .menu a:hover {
     border: none;
   }
 }

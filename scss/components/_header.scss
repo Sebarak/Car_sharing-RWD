@@ -11,7 +11,7 @@ header {
     justify-content: space-between;
   }
 
-  @include desktop{
+  @include desktop {
     height: 60px;
   }
 
@@ -61,7 +61,7 @@ header {
     &:checked {
 
       & ~ nav {
-        transform: translateX(20%);
+        transform: translateX(15%);
       }
     }
   }
@@ -98,44 +98,48 @@ header {
         align-items: center;
       }
 
-      li {
-        font: bold 16px/2em "Nunito Sans", sans-serif;
-        border-top: 1px solid $color-header-focus;
-        padding-right: 25%;
-
+      a {
         @include tablet {
           border: none;
           flex: 1 1;
           padding: 7px 0;
           text-align: center;
         }
-        @include desktop{
+        @include desktop {
           padding: 14px 0;
         }
 
-        a {
+        li {
+          font: bold 16px/2em "Nunito Sans", sans-serif;
+          border-top: 1px solid $color-header-focus;
           color: $color-white;
+          padding-right: 20%;
+          @include tablet{
+            padding-right: 0;
+          }
+        }
+
+
+        li:last-of-type {
+          border-bottom: 1px solid $color-header-focus;
+          @include tablet {
+            border: none;
+          }
         }
       }
 
-      li:last-of-type {
+      a:hover {
+        cursor: pointer;
+        background-color: $color-header-focus;
+        border-top: 1px solid $color-header-focus;
         border-bottom: 1px solid $color-header-focus;
         @include tablet {
           border: none;
         }
       }
-
-      li:hover {
-        cursor: pointer;
-        background-color: $color-header-focus;
-        border-top: 1px solid $color-header-focus;
-        border-bottom: 1px solid $color-header-focus;
-        @include tablet{
-          border: none;
-        }
-      }
     }
   }
+
   .logo:before {
     content: "";
     width: 35px;
