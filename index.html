@@ -14,19 +14,19 @@
 <body>
 
 <header class="container">
-    <h2><span>CAR</span>SHARING</h2>
+    <a href="#home"><h2><span>CAR</span>SHARING</h2></a>
     <input type="checkbox" name="menu-btn" class="hamburger">
     <nav>
         <ul class="menu">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">BLOG</a></li>
-            <li><a href="#">SERVICE</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#blog">BLOG</a></li>
+            <li><a href="#service">SERVICE</a></li>
+            <li><a href="#contact">CONTACT</a></li>
         </ul>
     </nav>
 </header>
 
-<section class="banner container">
+<section class="banner container" id="home">
     <div class="banner_area">
         <h1>CAR SHARING</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -39,7 +39,7 @@
     </div>
 </section>
 
-<main class="container">
+<main class="container" id="blog">
     <h2>BLOG</h2>
     <section class="blog">
         <div class="blog__option">
@@ -66,7 +66,7 @@
     </section>
 </main>
 
-<section class="service container">
+<section class="service container" id="service">
     <h2>SERVICE</h2>
     <section class="service__option">
         <div class="service__option__segment">
@@ -100,7 +100,7 @@
     </section>
 </section>
 
-<section class="contact container">
+<section class="contact container" id="contact">
     <h2>CONTACT</h2>
     <section class="contact__section">
         <img src="img/Form%20Photo.png" alt="contact-photo">
@@ -123,20 +123,22 @@
     </section>
 </section>
 
-<footer class="container">
-    <div class="footer_logo">
-        <h2><span>CAR</span>SHARING</h2>
-    </div>
+<footer class="container" id="footer">
+    <a href="#home">
+        <div class="footer_logo">
+            <h2><span>CAR</span>SHARING</h2>
+        </div>
+    </a>
     <div class="section">
         <div class="section__links">
-            <a href="#">HOME PAGE</a>
-            <a href="#">ABOUT US</a>
-            <a href="#">GALLERY</a>
-            <a href="#">SHARE REGULATION</a>
-            <a href="#">PRICE</a>
-            <a href="#">OUR FLEET</a>
-            <a href="#">OUR CLIENTS</a>
-            <a href="#">CONTACT</a>
+            <a href="#home">HOME PAGE</a>
+            <a href="#blog">ABOUT US</a>
+            <a href="#service">GALLERY</a>
+            <a href="#footer">SHARE REGULATION</a>
+            <a href="#footer">PRICE</a>
+            <a href="#footer">OUR FLEET</a>
+            <a href="#footer">OUR CLIENTS</a>
+            <a href="#contact">CONTACT</a>
         </div>
         <p>Copyright &copy Coders Lab</p>
     </div>
