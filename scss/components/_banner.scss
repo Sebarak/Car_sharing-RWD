@@ -4,6 +4,19 @@
   //padding-bottom: 42.5%;
   position: relative;
 
+  @include tablet{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding-bottom: 42.5%;
+
+    @media only screen and (min-width: 1005px){
+      height: 430px;
+      padding-bottom: 0;
+    }
+  }
+
+
 
   .banner_area {
     position: absolute;
@@ -15,6 +28,9 @@
     justify-content: center;
     align-items: center;
 
+    @include tablet{
+      max-width: $tablet-width;
+    }
     h1 {
       font: 900 40px/60px "Nunito Sans", sans-serif;
       color: $color-white;
@@ -30,6 +46,11 @@
     .banner__buttons {
       display: flex;
       flex-direction: column;
+
+      @include tablet{
+          flex-direction: row;
+        margin-top: 25px;
+      }
 
       button {
         border: none;

@@ -64,16 +64,6 @@ a {
   margin: 0 auto;
   padding: 8px;
 }
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
 
 header {
   height: 45px;
@@ -84,12 +74,22 @@ header {
   display: flex;
   align-items: center;
 }
-header h2 {
+@media screen and (min-width: 768px) {
+  header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+header .logo {
+  display: flex;
+}
+header .logo h2 {
   font: 800 28px/40px Nunito Sans;
   color: #FFFFFF;
   word-spacing: 5px;
 }
-header h2 span {
+header .logo h2 span {
   color: #FF0000;
 }
 header .hamburger {
@@ -105,6 +105,11 @@ header .hamburger {
   cursor: pointer;
   display: flex;
   justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  header .hamburger {
+    display: none;
+  }
 }
 header .hamburger::before {
   content: "\f0c9";
@@ -129,10 +134,37 @@ header nav {
   transform: translateX(100%);
   transition: all 0.7s cubic-bezier(1, -0.72, 0, 1.49);
 }
+@media screen and (min-width: 768px) {
+  header nav {
+    position: relative;
+    top: 0;
+    background: none;
+    border-left: none;
+    height: auto;
+    border-left: none;
+    width: 50%;
+    margin-right: 30px;
+    transform: translateX(0);
+  }
+}
+@media screen and (min-width: 768px) {
+  header nav .menu {
+    display: flex;
+    align-items: center;
+  }
+}
 header nav .menu li {
   font: bold 16px/2em "Nunito Sans", sans-serif;
   border-top: 1px solid #FFFFFF33;
   padding-right: 25%;
+}
+@media screen and (min-width: 768px) {
+  header nav .menu li {
+    border: none;
+    flex: 1 1;
+    padding: 7px 0;
+    text-align: center;
+  }
 }
 header nav .menu li a {
   color: #FFFFFF;
@@ -140,16 +172,26 @@ header nav .menu li a {
 header nav .menu li:last-of-type {
   border-bottom: 1px solid #FFFFFF33;
 }
+@media screen and (min-width: 768px) {
+  header nav .menu li:last-of-type {
+    border: none;
+  }
+}
 header nav .menu li:hover {
   cursor: pointer;
   background-color: #FFFFFF33;
   border-top: 1px solid #FFFFFF33;
   border-bottom: 1px solid #FFFFFF33;
 }
-
-header:before {
+@media screen and (min-width: 768px) {
+  header nav .menu li:hover {
+    border: none;
+  }
+}
+header .logo:before {
   content: "";
   width: 35px;
+  display: block;
   height: 35px;
   cursor: pointer;
   background: url(../../img/Icon.svg) no-repeat center/contain;
@@ -160,6 +202,20 @@ header:before {
   height: 333px;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .banner {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding-bottom: 42.5%;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1005px) {
+  .banner {
+    height: 430px;
+    padding-bottom: 0;
+  }
+}
 .banner .banner_area {
   position: absolute;
   top: 50%;
@@ -168,6 +224,11 @@ header:before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .banner .banner_area {
+    max-width: 768px;
+  }
 }
 .banner .banner_area h1 {
   font: 900 40px/60px "Nunito Sans", sans-serif;
@@ -182,6 +243,12 @@ header:before {
 .banner .banner_area .banner__buttons {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .banner .banner_area .banner__buttons {
+    flex-direction: row;
+    margin-top: 25px;
+  }
 }
 .banner .banner_area .banner__buttons button {
   border: none;
@@ -269,12 +336,28 @@ main .blog {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  main .blog {
+    flex-direction: row;
+  }
+}
 main .blog .blog__option {
   margin-bottom: 25px;
   border-bottom: 1px dashed #00000040;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  main .blog .blog__option {
+    padding: 8px;
+    border: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  main .blog .blog__option img {
+    width: 100%;
+  }
 }
 main .blog .blog__option h3 {
   margin: 25px 0 15px 0;
@@ -337,6 +420,11 @@ main .blog .blog__option:last-of-type {
 .service h2::after {
   right: -50%;
 }
+@media screen and (min-width: 768px) {
+  .service__option {
+    display: flex;
+  }
+}
 .service__option__segment {
   margin-bottom: 25px;
   border-bottom: 1px dashed #FFFFFF;
@@ -344,6 +432,12 @@ main .blog .blog__option:last-of-type {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .service__option__segment {
+    border: none;
+    padding: 8px;
+  }
 }
 .service__option__segment h3 {
   font: 19px/26px "Nunito Sans", sans-serif;
@@ -409,8 +503,19 @@ main .blog .blog__option:last-of-type {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .contact__section {
+    flex-direction: row;
+  }
+}
 .contact__section img {
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .contact__section img {
+    align-self: flex-start;
+    padding-right: 10px;
+  }
 }
 .contact__section__form {
   margin: 25px 0;
@@ -497,19 +602,27 @@ footer {
   justify-content: center;
   align-items: center;
 }
-footer .footer_logo {
+footer a {
+  align-self: flex-start;
+}
+footer a .footer_logo {
   margin: 40px 0 30px 0;
   cursor: pointer;
   display: flex;
   justify-content: center;
 }
-footer .footer_logo h2 {
+footer a .footer_logo h2 {
   font: bold 25px/34px "Nunito Sans", sans-serif;
   color: #FFFFFF;
 }
-footer .footer_logo h2 span {
+footer a .footer_logo h2 span {
   color: #FF0000;
   margin-right: 8px;
+}
+@media screen and (min-width: 768px) {
+  footer .section {
+    align-self: flex-start;
+  }
 }
 footer .section__links {
   margin-bottom: 20px;
@@ -520,6 +633,13 @@ footer .section__links {
   justify-content: space-between;
   align-items: center;
   align-content: center;
+}
+@media screen and (min-width: 768px) {
+  footer .section__links {
+    width: 300px;
+    align-items: flex-start;
+    align-content: normal;
+  }
 }
 footer .section__links a {
   font: bold 14px/19px "Nunito Sans", sans-serif;

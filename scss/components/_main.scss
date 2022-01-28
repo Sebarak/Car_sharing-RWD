@@ -33,6 +33,10 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include tablet{
+      flex-direction: row;
+    }
     .blog__option{
       margin-bottom: 25px;
       border-bottom: 1px dashed $color-transparent;
@@ -40,6 +44,16 @@ main{
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @include tablet{
+        padding: 8px;
+        border: none;
+      }
+      img{
+        @include tablet{
+          width: 100%;
+        }
+      }
       h3{
         margin: 25px 0 15px 0;
         font: 19px/26px "Nunito Sans",sans-serif;

@@ -13,12 +13,4 @@ a{
 .container {
   margin: 0 auto;
   padding: 8px;
-
-  @include tablet {
-    max-width: $tablet-width;
-  }
-
-  @include desktop {
-    max-width: $desktop-width;
-  }
 }

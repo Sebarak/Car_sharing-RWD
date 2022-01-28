@@ -31,6 +31,10 @@
     right: -50%;
   }
   &__option{
+
+    @include tablet{
+      display: flex;
+    }
     &__segment{
       margin-bottom: 25px;
       border-bottom: 1px dashed $color-white;
@@ -39,6 +43,11 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      @include tablet{
+        border: none;
+        padding: 8px;
+      }
       h3{
         font: 19px/26px "Nunito Sans",sans-serif;
         color: $color-white;

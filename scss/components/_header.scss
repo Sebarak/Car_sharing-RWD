@@ -1,20 +1,33 @@
-header{
+header {
   height: 45px;
   background-color: $color-header;
   position: fixed;
   width: 100%;
   z-index: 2;
 
+  @include tablet {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+  }
+
   display: flex;
   align-items: center;
-  h2{
-    font: 800 28px/40px Nunito Sans;
-    color: $color-white;
-    word-spacing: 5px;
-    span{
-      color: $color-primary;
+
+  .logo {
+    display: flex;
+
+    h2 {
+      font: 800 28px/40px Nunito Sans;
+      color: $color-white;
+      word-spacing: 5px;
+
+      span {
+        color: $color-primary;
+      }
     }
   }
+
   .hamburger {
     appearance: none;
     position: absolute;
@@ -23,7 +36,11 @@ header{
     height: 35px;
     border-radius: 5px;
     background-color: $color-header-focus;
-    cursor:pointer;
+    cursor: pointer;
+
+    @include tablet {
+      display: none;
+    }
 
     display: flex;
     justify-content: center;
@@ -36,14 +53,16 @@ header{
       font-family: "Font Awesome 5 Free", sans-serif;
       font-weight: 900;
     }
+
     &:checked {
 
-      & ~ nav{
+      & ~ nav {
         transform: translateX(20%);
       }
     }
   }
-  nav{
+
+  nav {
     position: fixed;
     top: 45px;
     right: 0;
@@ -55,31 +74,68 @@ header{
     transform: translateX(100%);
     transition: all .7s cubic-bezier(1, -0.72, 0, 1.49);
 
-    .menu{
-      li{
-        font:bold 16px/2em "Nunito Sans",sans-serif;
+    @include tablet {
+      position: relative;
+      top: 0;
+      background: none;
+      border-left: none;
+      height: auto;
+      border-left: none;
+      width: 50%;
+      margin-right: 30px;
+      transform: translateX(0);
+    }
+
+    .menu {
+
+      @include tablet {
+
+        display: flex;
+        align-items: center;
+      }
+
+      li {
+        font: bold 16px/2em "Nunito Sans", sans-serif;
         border-top: 1px solid $color-header-focus;
         padding-right: 25%;
-        a{
+
+        @include tablet {
+          border: none;
+          flex: 1 1;
+          padding: 7px 0;
+          text-align: center;
+        }
+
+        a {
           color: $color-white;
         }
       }
-      li:last-of-type{
+
+      li:last-of-type {
         border-bottom: 1px solid $color-header-focus;
+        @include tablet {
+          border: none;
+        }
       }
-      li:hover{
-        cursor:pointer;
+
+      li:hover {
+        cursor: pointer;
         background-color: $color-header-focus;
         border-top: 1px solid $color-header-focus;
         border-bottom: 1px solid $color-header-focus;
+        @include tablet{
+          border: none;
+        }
       }
     }
   }
+  .logo:before {
+    content: "";
+    width: 35px;
+    display: block;
+    height: 35px;
+    cursor: pointer;
+    background: url(../../img/Icon.svg) no-repeat center/contain;
+  }
 }
-header:before{
-  content: "";
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  background: url(../../img/Icon.svg) no-repeat center/contain;
-}
+
