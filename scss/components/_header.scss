@@ -11,6 +11,10 @@ header {
     justify-content: space-between;
   }
 
+  @include desktop{
+    height: 60px;
+  }
+
   display: flex;
   align-items: center;
 
@@ -104,6 +108,9 @@ header {
           flex: 1 1;
           padding: 7px 0;
           text-align: center;
+        }
+        @include desktop{
+          padding: 14px 0;
         }
 
         a {

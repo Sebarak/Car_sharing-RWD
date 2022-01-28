@@ -4,6 +4,10 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include desktop{
+    width: 1088px;
+  }
   h2{
     margin: 82px 0 40px 0;
     position: relative;
@@ -37,6 +41,7 @@ main{
     @include tablet{
       flex-direction: row;
     }
+
     .blog__option{
       margin-bottom: 25px;
       border-bottom: 1px dashed $color-transparent;
@@ -48,6 +53,9 @@ main{
       @include tablet{
         padding: 8px;
         border: none;
+      }
+      @include desktop{
+        align-items: flex-start;
       }
       img{
         @include tablet{
@@ -63,6 +71,10 @@ main{
         text-align: center;
         font: 300 14px/19px "Open Sans",sans-serif;
         color: $color-paragraphs;
+        @include desktop{
+          text-align: left;
+          width: 260px;
+        }
       }
       button{
         margin: 15px 0;

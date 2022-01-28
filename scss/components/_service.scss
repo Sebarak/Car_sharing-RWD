@@ -35,6 +35,10 @@
     @include tablet{
       display: flex;
     }
+
+    @include desktop{
+      width: 1088px;
+    }
     &__segment{
       margin-bottom: 25px;
       border-bottom: 1px dashed $color-white;

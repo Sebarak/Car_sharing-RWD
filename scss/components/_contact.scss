@@ -41,6 +41,9 @@
     @include tablet{
       flex-direction: row;
     }
+    @include desktop{
+      width: 900px;
+    }
     img {
       width: 100%;
 
@@ -81,7 +84,7 @@
       .checkbox__area {
         margin-top: 15px;
         max-height: 200px;
-
+          position: relative;
         input[type="checkbox"] {
           width: 22px;
           height: 22px;
@@ -121,6 +124,10 @@
         font: bold 14px/19px "Nunito Sans",sans-serif;
         border-radius: 40px;
         transition: transform .4s cubic-bezier(1, -0.72, 0, 1.49);
+        @include desktop{
+          margin-top: -60px;
+          align-self: flex-end;
+        }
       }
       button:hover{
         cursor: pointer;
